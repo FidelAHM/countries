@@ -57,11 +57,18 @@ dependencies:
   flutter_windowmanager: ^0.2.0
   permission_handler: ^11.3.1
   path_provider: ^2.1.3
+  introduction_screen: ^3.1.14
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  image_path: "assets/images/world.png"
+  android: true
+  ios: true
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

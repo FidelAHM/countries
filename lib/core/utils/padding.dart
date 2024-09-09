@@ -14,6 +14,7 @@ abstract class XPadding {
   static EdgeInsets allTopAndLeft = EdgeInsets.only(top: 30.h, left: 10.w);
   static EdgeInsets onlyBottom = EdgeInsets.only(bottom: 5.h);
   static EdgeInsets onlyBottom10 = EdgeInsets.only(bottom: 10.h);
+  static EdgeInsets onlyTop10 = EdgeInsets.only(top: 10.h);
   static EdgeInsets leftRightSidePadding =
       EdgeInsets.symmetric(vertical: 12.0.h, horizontal: 50.0.w);
   static EdgeInsets allSidePadding55 = EdgeInsets.fromLTRB(5.w, 5.h, 5.w, 5.h);

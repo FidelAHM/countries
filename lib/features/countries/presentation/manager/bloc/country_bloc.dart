@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:countries/core/navigator_key.dart';
-import 'package:countries/core/widget/dialog/custom_snack_bard.dart';
+import 'package:countries/core/widget/dialog/custom_snack_bar.dart';
 import 'package:countries/features/countries/data/Model/Country_list_model.dart';
 import 'package:countries/features/countries/data/data_source/country_api.dart';
 import 'package:equatable/equatable.dart';
@@ -18,7 +18,7 @@ class CountryBloc extends Bloc<CountryEvent, CountryState> {
       } catch (e) {
         print('________Error${e}');
         CustomSnackbar(navigatorKey.currentContext!)
-            .showErrorMessage('An error an occured');
+            .showErrorMessage(e.toString());
         emit(CountryDataError('an error has occured'));
       }
     });

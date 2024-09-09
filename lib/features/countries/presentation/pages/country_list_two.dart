@@ -31,7 +31,7 @@ class _CountryListTwoState extends State<CountryListTwo> {
       _runFilter(_searchController.text);
     });
   }
-
+//////searching function
   void _runFilter(String enteredKeyword) {
     final countriesBloc = context.read<CountryBloc>();
     if (countriesBloc.state is CountryDataLoadedState) {
@@ -99,9 +99,11 @@ class _CountryListTwoState extends State<CountryListTwo> {
                                   elevation: 0,
                                   child: ListTile(
                                     onTap: () {
-                                      // Navigator.pushNamed(
-                                      //     context, AppRoutes.favouriteProduct,
-                                      //     arguments: products);
+                                      Navigator.pushNamed(
+                                          context, AppRoutes.countryDetail,
+                                          arguments: countries
+                                          );
+                                          /////detail page navigation with countries
                                     },
                                     leading: Image.network(
                                         height: 50.h,

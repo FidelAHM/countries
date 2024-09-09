@@ -3,46 +3,41 @@ class CountryListModel {
   final String official;
   final String region;
   final String flags;
-  // // final String region;
-  // // final String capital;
-  // final int population;
-  // // final String borders;
-  // // final String nativeCommon;
-  // final String nativeOffical;
+  final List<dynamic> capital;
+  final int population;
+  final Map<String,dynamic> currencies;
+  final Map<String,dynamic> language;
+   final List<dynamic> borders;
 
   CountryListModel({
-    // required this.borders,
-    // required this.capital,
+    required this.capital,
     required this.common,
     required this.region,
     required this.flags,
-    // required this.name,
-    // required this.nativeName,
     required this.official,
-    // required this.population,
-    // // required this.region,
-    // // required this.nativeCommon,
-    // required this.nativeOffical
+    required this.population,
+    required this.currencies,
+    required this.language,
+    required this.borders
+ 
   });
 
   factory CountryListModel.fromJson(Map<String, dynamic> json) {
-    // var nativeName = json['name']['nativeName'];
-
-    // Get the first key dynamically (assuming at least one exists)
-    // String firstKey = nativeName.keys.first;
+    
     return CountryListModel(
-      // borders: json['borders'][0] ?? "no data",
-      // capital: json['capital'][0] ?? "no data",
-      common: json['name']['common'] ?? "no data",
-      flags: json['flags']['png'] ?? "no data",
-      // name: json['name'] ?? "no data",
-      // nativeName: json['nativeName'] ?? "no data",
-      official: json['name']['official'] ?? "no data",
-      region: json['region']
-      // population: json['population'] ?? 0,
-      // region: json['region'] ?? "no data",
-      // nativeCommon: json['nativeName']['common'] ?? "no data",
-      // nativeOffical: json['name']['nativeName']['eng']['common'] ?? ""
-    );
+        capital:
+            json['capital'] != null ? List<String>.from(json['capital']) : [],
+        common: json['name']['common'] ?? "no data",
+        flags: json['flags']['png'] ?? "no data",
+        population: json['population'] ?? 0,
+        official: json['name']['official'] ?? "no data",
+        region: json['region'] ?? "no data", 
+        currencies:  json['currencies'] ?? {},
+        language: json['languages'] ?? {},
+        borders: json['borders'] != null
+          ? List<String>.from(json['borders'])
+          : [], 
+    
+        );
   }
 }
