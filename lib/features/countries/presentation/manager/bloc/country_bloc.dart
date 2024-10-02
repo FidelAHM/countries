@@ -18,7 +18,7 @@ class CountryBloc extends Bloc<CountryEvent, CountryState> {
       } catch (e) {
         print('________Error${e}');
         CustomSnackbar(navigatorKey.currentContext!)
-            .showErrorMessage(e.toString());
+            .showErrorMessage(e.runtimeType.toString());
         emit(CountryDataError('an error has occured'));
       }
     });

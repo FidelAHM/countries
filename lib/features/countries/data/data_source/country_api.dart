@@ -19,7 +19,10 @@ class CountriesAPI {
     if (response.statusCode == 200) {
       final List result = jsonResponse as List;
       print('_______success');
+        CustomSnackbar(navigatorKey.currentContext!)
+          .showSuccessMessage('Successful');
       return result.map((e) => CountryListModel.fromJson(e)).toList();
+      
     } else {
       CustomSnackbar(navigatorKey.currentContext!)
           .showErrorMessage(response.reasonPhrase.toString());
