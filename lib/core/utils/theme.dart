@@ -59,6 +59,7 @@ class AppColors {
 
   static Color lemonGreen = fromHex("#86C144");
   static Color darkGreen = Color.fromARGB(255, 23, 66, 24);
+  static Color purpleTheme = fromHex("8F7CFE");
 
   static Color fromHex(String hexString) {
     final buffer = StringBuffer();

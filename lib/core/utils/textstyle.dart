@@ -35,6 +35,12 @@ abstract class AppTextStyle {
     fontFamily: 'Inter',
     fontWeight: FontWeight.w600,
   );
+   static TextStyle txtInterSemiBold25Purple = TextStyle(
+    color: AppColors.purpleTheme,
+    fontSize: 25,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w600,
+  );
   static TextStyle txtInterSemiBold35Lightblue900 = TextStyle(
     color: AppColors.lightBlue900,
     fontSize: 35.sp,
@@ -113,6 +119,12 @@ abstract class AppTextStyle {
 
   static TextStyle txtInterSemiBold12DarkGreen = TextStyle(
     color: AppColors.darkGreen,
+    fontSize: 12.sp,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w700,
+  );
+  static TextStyle txtInterSemiBold12Purple = TextStyle(
+    color: AppColors.purpleTheme,
     fontSize: 12.sp,
     fontFamily: 'Inter',
     fontWeight: FontWeight.w700,

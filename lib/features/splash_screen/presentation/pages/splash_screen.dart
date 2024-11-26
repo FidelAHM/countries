@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-      splash: AppImages.logo,
+      splash: AppImages.blog,
       nextScreen:  IntroScreen(),
       backgroundColor: AppColors.whiteA700,
       duration: 3000,

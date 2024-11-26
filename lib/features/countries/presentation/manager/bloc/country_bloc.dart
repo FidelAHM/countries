@@ -16,11 +16,11 @@ class CountryBloc extends Bloc<CountryEvent, CountryState> {
         final countries = await CountriesAPI().listCountries();
         emit(CountryDataLoadedState(countries as List<CountryListModel>));
       } catch (e) {
-        print('________Error${e}');
+        print('________Error ${e}');
         CustomSnackbar(navigatorKey.currentContext!)
             .showErrorMessage(e.runtimeType.toString());
         emit(CountryDataError('an error has occured'));
       }
     });
-  }
+  }  
 }

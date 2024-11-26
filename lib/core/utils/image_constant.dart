@@ -8,5 +8,8 @@ class AppImages {
   static String world1 = 'assets/images/planet-earth.png';
   static String world2 = 'assets/images/worldwide.png';
   static String world3 = 'assets/images/world.png';
+  static String blog = 'assets/images/blog.png';
+  static String blogs = 'assets/images/blog1.png';
+  static String blogging = 'assets/images/blog2.png';
   
 }

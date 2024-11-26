@@ -15,35 +15,40 @@ class IntroScreen extends StatefulWidget {
 
 class _IntroScreenState extends State<IntroScreen> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: IntroductionScreen(
       pages: [
         PageViewModel(
-            title: "Country App",
-            body: "See All The Countries In The World",
-            image: buildImage(AppImages.world1),
+            title: "Blog App",
+            body: "Discover Blogs",
+            image: buildImage(AppImages.blog),
             decoration: getPageDecoration()),
         PageViewModel(
-            title: "Country App",
-            body: "Know about World Population",
-            image: buildImage(AppImages.population),
+            title: "Blog App",
+            body: "Read Blogs",
+            image: buildImage(AppImages.blogs),
             decoration: getPageDecoration()),
         PageViewModel(
-            title: "Country App",
-            body: "Capital Cities and More ...",
-            image: buildImage(AppImages.capital),
+            title: "Blog App",
+            body: "Watch ads and More ...",
+            image: buildImage(AppImages.blogging),
             decoration: getPageDecoration()),
       ],
       done: InkWell(
-        child: Text("Get Started",
-            style: AppTextStyle.txtInterSemiBold12DarkGreen),
+        child:
+            Text("Get Started", style: AppTextStyle.txtInterSemiBold12Purple),
         onTap: () {
-          Navigator.pushNamed(context, AppRoutes.countryListTwo);
+          Navigator.pushNamed(context, AppRoutes.blogPage);
         },
       ),
       onDone: () {},
-      next: Icon(Icons.arrow_forward, color: AppColors.darkGreen),
+      next: Icon(Icons.arrow_forward, color: AppColors.purpleTheme),
       showNextButton: true,
       showBackButton: false,
       showSkipButton: true,
@@ -51,7 +56,7 @@ class _IntroScreenState extends State<IntroScreen> {
       onChange: (index) {
         print('page$index selected');
       },
-      skip: Text("Skip", style: AppTextStyle.txtInterSemiBold12DarkGreen),
+      skip: Text("Skip", style: AppTextStyle.txtInterSemiBold12Purple),
     ));
   }
 
@@ -70,7 +75,7 @@ class _IntroScreenState extends State<IntroScreen> {
   }
 
   PageDecoration getPageDecoration() => PageDecoration(
-        titleTextStyle: AppTextStyle.txtInterSemiBold25DarkGreen,
+        titleTextStyle: AppTextStyle.txtInterSemiBold25Purple,
         imagePadding: EdgeInsets.fromLTRB(10.w, 10.h, 10.w, 10.h),
         pageColor: AppColors.whiteA700,
       );
@@ -82,6 +87,6 @@ class _IntroScreenState extends State<IntroScreen> {
         activeSize: Size(22, 10),
         activeShape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(24.r)),
-        activeColor: AppColors.darkGreen);
+        activeColor: AppColors.purpleTheme);
   }
 }
